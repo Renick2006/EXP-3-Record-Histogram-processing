@@ -37,7 +37,7 @@ The program performs the following operations:
 Import the required libraries: OpenCV, NumPy, and Matplotlib.
 
 ### Step 2:
-Read the image `parrot.jpg` in grayscale format.
+Read the image `dp.jpg` in grayscale format.
 
 ### Step 3:
 Display the grayscale image and plot its histogram.
@@ -70,6 +70,16 @@ Display original color image, histogram, enhanced image, and enhanced histogram 
 
 ## Program
 ```
+# Import required libraries
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+
+# Read the image in grayscale format
+img = cv2.imread('dp.jpg',cv2.IMREAD_GRAYSCALE)
+
 # Display the grayscale image.
 plt.imshow(img, cmap='gray')
 plt.title('original_image')
@@ -77,7 +87,8 @@ plt.show()
 
 ```
 
-<img width="557" height="372" alt="image" src="https://github.com/user-attachments/assets/0c73180f-60c8-45bf-9fac-9efe002a0433" />
+<img width="371" height="412" alt="image" src="https://github.com/user-attachments/assets/213f0f80-cc15-4964-81ba-c717a3f965e5" />
+
 
 ```
 
@@ -88,7 +99,8 @@ plt.show()
 
 ```
 
-<img width="587" height="410" alt="image" src="https://github.com/user-attachments/assets/ea976333-70ec-491b-9572-08e1fb64a642" />
+<img width="572" height="411" alt="image" src="https://github.com/user-attachments/assets/8f45a3a4-1542-4b13-ad56-730447e6bdaf" />
+
 
 ```
 # Perform histogram equalization
@@ -98,7 +110,8 @@ plt.title('Equalized Histogram')
 
 ```
 
-<img width="607" height="435" alt="image" src="https://github.com/user-attachments/assets/d29ebf3f-6719-44cf-b1a8-2d26cd36bc84" />
+<img width="571" height="435" alt="image" src="https://github.com/user-attachments/assets/86cb14f2-6aca-487e-9dd3-b9d13adfe932" />
+
 
 ```
 # Display [1] the Original Image (Gray Image) and its Histogram, and [2] the Enhanced Image and its Histogram using a 2×2 layout in Matplotlib.
@@ -107,17 +120,19 @@ plt.title('original image')
 plt.show()
 ```
 
-<img width="615" height="387" alt="image" src="https://github.com/user-attachments/assets/7fc5978d-a2e4-4dab-9927-088a1321e39a" />
+<img width="376" height="422" alt="image" src="https://github.com/user-attachments/assets/546ae9a1-b530-4910-824e-1501121d61b4" />
+
 
 ```
-# Read the colorgiven parrot.jpg image.
+# Read the colorgiven dp.jpg image.
 
-img = cv2.imread('parrot.jpg', cv2.IMREAD_COLOR)
+img = cv2.imread('dp.jpg', cv2.IMREAD_COLOR)
 plt.subplot(121); plt.imshow(img[:, :, ::-1]); plt.title('Original Color Image')
 
 ```
 
-<img width="282" height="225" alt="image" src="https://github.com/user-attachments/assets/95c9c865-e55c-4a3e-875a-e2faa7f98f39" />
+<img width="293" height="363" alt="image" src="https://github.com/user-attachments/assets/0596d5b2-e04f-4ae1-9fcf-4b75a006d6fb" />
+
 
 ```
 # Plot the histogram of colour image
@@ -126,7 +141,9 @@ plt.subplot(223); plt.hist(img.ravel(),256,range = [0, 256]); plt.title('Origina
 
 
 ```
-<img width="315" height="246" alt="image" src="https://github.com/user-attachments/assets/f2432b46-4e04-45fd-b715-88560df1ea41" />
+
+<img width="302" height="237" alt="image" src="https://github.com/user-attachments/assets/0d2800c2-ae61-47d6-8ac2-96c75026d7f9" />
+
 
 ```
 
@@ -142,7 +159,8 @@ plt.subplot(224); plt.hist(img_eq.ravel(),256,range = [0, 256]); plt.title('Hist
 
 ```
 
-<img width="357" height="250" alt="image" src="https://github.com/user-attachments/assets/dc881f01-155a-4ca3-a557-b89e685ccdbb" />
+<img width="336" height="252" alt="image" src="https://github.com/user-attachments/assets/09447cab-ee92-4263-8ef9-8e3b3bcde94c" />
+
 
 ```
 # Convert back to BGR format
@@ -157,7 +175,7 @@ plt.subplot(222); plt.imshow(img_eq[:, :, ::-1]); plt.title('Equalized Image')
 
 ```
 
-<img width="952" height="361" alt="image" src="https://github.com/user-attachments/assets/95ec900f-aa66-425f-970f-cf83490f3c9d" />
+<img width="807" height="422" alt="image" src="https://github.com/user-attachments/assets/0a2b6a60-5597-4f3a-a506-a4e2cf213b61" />
 
 
 ---
